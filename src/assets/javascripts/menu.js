@@ -1,5 +1,6 @@
 (function() {
-  const ui = require("ui");  var currentFile, editor, editorSession, file, menu, openFile, saveFile;
+  var currentFile, editor, editorSession, file, menu, openFile, saveFile, ui;
+  ui = require("ui");
   menu = require("menu");
   editor = null;
   editorSession = null;

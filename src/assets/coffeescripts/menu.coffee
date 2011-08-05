@@ -1,4 +1,5 @@
-`const ui = require("ui")`
+# `const ui = require("ui")`
+ui = require "ui"
 menu = require "menu"
 
 editor = null
