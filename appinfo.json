@@ -1,8 +1,9 @@
 {
     "build_id": "20110804203841", 
-    "vendor": "Unknown", 
+    "vendor": "The Hybrid Group", 
     "name": "KidsRuby", 
-    "developer_email": "unknown@unknown.com", 
+    "resizable": true, 
+    "developer_email": "info@kidsruby.com", 
     "module_dirs": [], 
     "version": "0.1"
 }
