@@ -37,7 +37,7 @@ clearOutputs = ->
 
 submitRubyCode = (editor) ->
   ruby = editor.getCode()
-  new Runner(ruby).run()
+  new window.Runner(ruby).run()
 
 openRubyCode = ->
   # todo: implement this using Titanium
@@ -82,11 +82,11 @@ jQuery ->
   docWidth = ($ "body").width()
   docHeight = ($ document).height()
 
-  CodeMirrorConfig.stylesheet = "lib/assets/stylesheets/rubycolors.css";  # this will allow us to dynamically change style at runtime
+  CodeMirrorConfig.stylesheet = "lib/assets/stylesheets/codemirror/rubycolors.css";  # this will allow us to dynamically change style at runtime
 
   codemirror_options =
-    parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"]
-    path: "codemirror/js/"
+    parserfile: ["/tokenizeruby.js", "/parseruby.js"]
+    path: "lib/assets/javascripts/codemirror/"
     lineNumbers: true
     textWrapping: false
     indentUnit: 2
