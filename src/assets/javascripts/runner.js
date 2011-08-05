@@ -20,17 +20,6 @@
         mergeStderr: false
       });
     };
-    Runner.prototype.saveCode = function() {
-      var fileName, tempDir;
-      tempDir = "";
-      fileName = "";
-      return fileName;
-    };
-    Runner.prototype.buildCode = function(code) {
-      var newCode;
-      newCode = "";
-      return newCode;
-    };
     return Runner;
   })();
 }).call(this);

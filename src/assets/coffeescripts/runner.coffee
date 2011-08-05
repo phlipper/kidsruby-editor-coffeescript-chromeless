@@ -27,14 +27,3 @@ class window.Runner
 
       mergeStderr: false
     }
-
-
-  saveCode: ->
-    tempDir  = ""
-    fileName = ""
-    # file.write @buildCode(@code)
-    fileName
-
-  buildCode: (code) ->
-    newCode = ""
-    newCode

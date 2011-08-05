@@ -5,23 +5,39 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>KidsRuby</title>
   <link rel="stylesheet" href="lib/assets/stylesheets/application.css" type="text/css" media="screen" title="style">
+  <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+
+    #editor {
+      width: 50%;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    button#run {
+      left: 40%;
+      position: relative;
+      width: 100px;
+      height: 35px;
+    }
+  </style>
 </head>
 
 <body id="index">
 
-  <div id="input">
-    <textarea id="rubycode" cols="40">
-      # Type in your code just below here:
-    </textarea>
-
-    <div id="buttons">
-      <button id="run">Run</button>
-      <!-- <button id="open">Open</button>
-      <button id="save">Save</button> -->
-    </div>
+  <div id="container">
+    <pre id="editor"># Type in your code just below here:</pre>
   </div>
 
   <aside id="tabs">
+    <button id="run">Run</button>
+
     <ul>
       <li><a href="#help">Help</a></li>
       <li><a href="#output">Output</a></li>
@@ -42,6 +58,12 @@
     </div>
   </aside>
 
-  <script type="text/javascript" src="lib/assets/javascripts/application.js"></script>
+
+  <script src="lib/assets/javascripts/application.js" type="application/javascript;version=1.8" charset="utf-8"></script>
+  <script src="lib/assets/javascripts/ace.js" type="application/javascript;version=1.8" charset="utf-8"></script>
+  <script src="lib/assets/javascripts/theme-twilight.js" type="application/javascript;version=1.8" charset="utf-8"></script>
+  <script src="lib/assets/javascripts/mode-ruby.js" type="application/javascript;version=1.8" charset="utf-8"></script>
+  <script src="lib/assets/javascripts/index.js" type="application/javascript;version=1.8" charset="utf-8"></script>
+
 </body>
 </html>
