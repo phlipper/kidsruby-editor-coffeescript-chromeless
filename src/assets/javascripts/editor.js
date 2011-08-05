@@ -41,7 +41,7 @@
   submitRubyCode = function(editor) {
     var ruby;
     ruby = editor.getCode();
-    return new Runner(ruby).run();
+    return new window.Runner(ruby).run();
   };
   openRubyCode = function() {};
   saveRubyCode = function(editor) {};
@@ -78,10 +78,10 @@
     var codemirror_options, docHeight, docWidth, editor, tabs;
     docWidth = ($("body")).width();
     docHeight = ($(document)).height();
-    CodeMirrorConfig.stylesheet = "lib/assets/stylesheets/rubycolors.css";
+    CodeMirrorConfig.stylesheet = "lib/assets/stylesheets/codemirror/rubycolors.css";
     codemirror_options = {
-      parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
-      path: "codemirror/js/",
+      parserfile: ["/tokenizeruby.js", "/parseruby.js"],
+      path: "lib/assets/javascripts/codemirror/",
       lineNumbers: true,
       textWrapping: false,
       indentUnit: 2,
