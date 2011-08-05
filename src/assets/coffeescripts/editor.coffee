@@ -1,6 +1,3 @@
-# var server = new KidsRubyServer();
-# server.start();
-
 selectTab = (id) -> ($ "#tabs").tabs("select", id) unless ($ "#tabs").tabs("option", "selected") is id
 
 
@@ -33,14 +30,11 @@ submitRubyCode = (editor) ->
   new window.Runner(ruby).run()
 
 
-getEditor = ->
-  ($ "#rubycode").data "editor"
+getEditor = -> ($ "#rubycode").data "editor"
 
-clearCode = ->
-  getEditor().setCode ""
+clearCode = -> getEditor().setCode ""
 
-addCode = (code) ->
-  getEditor().setCode getEditor().getCode() + "\n" + code
+addCode = (code) -> getEditor().setCode getEditor().getCode() + "\n" + code
 
 initTurtle = ->
   turtle = new Pen("turtle-canvas")
@@ -53,36 +47,31 @@ callTurtle = (arguments) ->
   command = Array::shift.call arguments
   turtle[command].apply turtle, arguments
 
-getTurtle = ->
-  ($ "#turtle").data "turtle"
+getTurtle = -> ($ "#turtle").data "turtle"
 
-setTurtleBackground = (color) ->
-  ($ "#turtle").css "backgroundColor", unescape(color)
+setTurtleBackground = (color) -> ($ "#turtle").css "backgroundColor", unescape(color)
+
 
 
 jQuery ->
+
+  ($ "#tabs").tabs()
+
   docWidth = ($ "body").width()
   docHeight = ($ document).height()
 
-  # ($ "#rubycode").data "editor", editor
-
   # Set the output width
   ($ "#output").width = docWidth
-
-  tabs = ($ "#tabs").tabs()
-  ($ "#tabs").data "mytabs", tabs
 
   ($ "#run").click (e) ->
     selectTab(1)
     clearOutputs()
     # submitRubyCode(editor)
 
-  # ($ "#open").click (e) -> openRubyCode editor
+    selectTab(2)  # default to help tab
 
-  # ($ "#save").click (e) -> saveRubyCode editor
 
-  # initTurtle()
-
-  # initServer()
+  initTurtle()
+  # setTimeout initTurtle(), 500
 
   selectTab(0)  # default to help tab

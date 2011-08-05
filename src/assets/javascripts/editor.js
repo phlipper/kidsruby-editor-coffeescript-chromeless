@@ -70,16 +70,17 @@
     return ($("#turtle")).css("backgroundColor", unescape(color));
   };
   jQuery(function() {
-    var docHeight, docWidth, tabs;
+    var docHeight, docWidth;
+    ($("#tabs")).tabs();
     docWidth = ($("body")).width();
     docHeight = ($(document)).height();
     ($("#output")).width = docWidth;
-    tabs = ($("#tabs")).tabs();
-    ($("#tabs")).data("mytabs", tabs);
     ($("#run")).click(function(e) {
       selectTab(1);
-      return clearOutputs();
+      clearOutputs();
+      return selectTab(2);
     });
+    initTurtle();
     return selectTab(0);
   });
 }).call(this);

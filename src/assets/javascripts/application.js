@@ -9,5 +9,5 @@
 //= require "editor"
 // = require "menu"
 //
-// = require "pen"
+//= require "pen"
 // = require "hsv"
