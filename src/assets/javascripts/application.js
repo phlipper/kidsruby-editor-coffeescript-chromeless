@@ -9,6 +9,7 @@
 //
 //= require "runner"
 //= require "editor"
+//= require "menu"
 //
 //= require "pen"
 //= require "hsv"
